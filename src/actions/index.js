@@ -1,4 +1,4 @@
-import {getRepoData} from './helpers'
+import {getRepoData, loadResult} from './helpers'
 
 export const getUserData = username => {
     return async dispatch => {

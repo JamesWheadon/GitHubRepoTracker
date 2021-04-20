@@ -11,3 +11,8 @@ export const getRepoData = async username => {
         throw new Error(err.message);
     }
 }
+
+export const loadResult = ( data ) => ({ 
+    type: 'LOAD_RESULT',
+    payload: { data } 
+});
