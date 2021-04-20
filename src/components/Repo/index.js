@@ -1,6 +1,7 @@
 import React from 'react';
 
 function Repo ({ repoData }) {
+    console.log(repoData)
     return (
         <div>
             <h3>{repoData.name}</h3>
@@ -13,7 +14,7 @@ function Repo ({ repoData }) {
             </ul>
             <a href={repoData.url}>See more</a>
         </div>
-    )
-}
+    );
+};
 
 export default Repo;
