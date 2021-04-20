@@ -16,7 +16,7 @@ function User() {
 
     const renderRepos = () => {
         return result.data.map(r =>
-            <Repo repoData={r} key={result.data.indexOf(r)}/>
+            r.name ? <Repo repoData={r} key={result.data.indexOf(r)}/> : console.log('empty repo')
         );
     }
 
