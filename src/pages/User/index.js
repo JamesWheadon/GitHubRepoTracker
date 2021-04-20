@@ -15,9 +15,9 @@ function User() {
     const search = username => dispatch(getUserData(username));
 
     const renderRepos = () => {
-        result.forEach(r => {
-            <Repo repoData={r} />
-        })
+        return result.data.map(r =>
+            <Repo repoData={r} key={result.data.indexOf(r)}/>
+        );
     }
 
     return (
