@@ -15,3 +15,5 @@ function Repo ({ repoData }) {
         </div>
     )
 }
+
+export default Repo;
