@@ -15,7 +15,8 @@ function SearchForm({ getRepos }) {
 
     return (
         <form onSubmit={handleSubmit} role="form">
-            <input type="text" value={location} onChange={updateInput}/>
+            <label for="username">GitHub Username:</label>
+            <input type="text" id="username" value={location} onChange={updateInput}/>
             <input type="submit" value="Search" />
         </form>
     );
