@@ -11,7 +11,7 @@ body {
     width: 25%;
     display: inline;
     border-radius: 50%;
-    padding-top: 50px;
+    margin-top: 50px;
 }
 
 .repo {
