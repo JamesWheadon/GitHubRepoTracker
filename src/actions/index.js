@@ -10,7 +10,7 @@ export const getUserData = username => {
             });
             const userData = {userAvatar: avatar, userRepoData: repoData}
             console.log(userData)
-            dispatch(loadResult(repoData));
+            dispatch(loadResult(userData));
         } catch (err) {
             console.warn(err.message);
             dispatch({ type: 'SET_ERROR', payload: err.message });

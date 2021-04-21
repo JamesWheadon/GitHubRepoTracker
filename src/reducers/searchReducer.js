@@ -1,4 +1,4 @@
-const initState = { result: {data: [{ name: "", url: "", issues: "", forks: "", stargazers: "", language:"", lastUpdated: ""}]}, loading: false };
+const initState = { result: {data: {userAvatar: "", userRepoData: [{ name: "", url: "", issues: "", forks: "", stargazers: "", language:"", lastUpdated: ""}]}}, loading: false };
 
 const searchReducer = (state=initState, action) => {
     switch(action.type){
