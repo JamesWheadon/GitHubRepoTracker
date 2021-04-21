@@ -6,36 +6,36 @@ body {
     background-color: white;
 }
 
-.repo {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-}
-
-.repoTitle {
-    width: 50%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-}
-
-.repoTitle h3 {
+.repo h3 {
     font-size: 30px;
     grid-row: 1;
     grid-column: 1 / span 2;
 }
 
-.repoTitle h3 a {
+.repo h3 a {
     color: blue;
     text-decoration: none;
 }
 
-.repoTitle h3 a:hover {
+.repo h3 a:hover {
     text-decoration: underline;
     cursor: pointer;
 }
 
-.repoTitle h4 {
+ul.repoData {
+    padding-left: 0px;
+}
+
+ul.repoData li {
+    display: inline;
+    padding-right: 15px;
+}
+
+ul.repoData h4 {
+    display: inline;
+}
+
+ul.repoData h4 {
     font-size: 14px;
     grid-row: 2;
     color: grey;
