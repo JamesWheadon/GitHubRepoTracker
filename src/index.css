@@ -40,3 +40,7 @@ body {
     grid-row: 2;
     color: grey;
 }
+
+hr {
+    color: grey;
+}
