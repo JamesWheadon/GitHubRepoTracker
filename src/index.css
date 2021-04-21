@@ -6,6 +6,18 @@ body {
     background-color: white;
 }
 
+.avatar {
+    float: left;
+    width: 25%;
+    display: inline;
+}
+
+.repo {
+    width: 75%;
+    display: inline;
+    float: right;
+}
+
 .repo h3 {
     font-size: 30px;
     grid-row: 1;

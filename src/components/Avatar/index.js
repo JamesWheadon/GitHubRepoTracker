@@ -2,7 +2,7 @@ import React from 'react';
 
 const Avatar = ({imageSrc}) => {
     return (
-        <img src={imageSrc} />
+        <img className="avatar" src={imageSrc} />
     );
 };
 
