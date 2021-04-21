@@ -15,6 +15,7 @@ function User() {
     const search = username => dispatch(getUserData(username));
 
     const renderRepos = () => {
+        console.log(result)
         return result.data.map(r =>
             r.name ? <Repo repoData={r} key={result.data.indexOf(r)}/> : console.log('empty repo')
         );
