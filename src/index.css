@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+}
+
+.repo {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.repoTitle {
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.repoTitle h3 {
+    font-size: 30px;
+    grid-row: 1;
+    grid-column: 1 / span 2;
+}
+
+.repoTitle h3 a {
+    color: blue;
+    text-decoration: none;
+}
+
+.repoTitle h3 a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.repoTitle h4 {
+    font-size: 14px;
+    grid-row: 2;
+    color: grey;
+}
+
+hr {
+    color: grey;
+}
