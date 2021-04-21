@@ -6,7 +6,8 @@ import './style.css'
 const Header = () => {
     return (
         <>
-        <h1 id="gitTracker" class="header">gitTracker</h1>
+        <img src="https://cdn4.iconfinder.com/data/icons/vector-brand-logos/40/Git-512.png" alt="Git" />
+        <h1 id="gitTracker" className="header">gitTracker</h1>
         <NavBar />
         </>
     );
