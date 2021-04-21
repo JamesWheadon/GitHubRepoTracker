@@ -1,6 +1,6 @@
 import React from 'react';
 import data from './languageColours.json';
-import './style.css'
+import './style.css';
 
 function Repo({ repoData }) {
 
@@ -13,7 +13,6 @@ function Repo({ repoData }) {
     }
 
     const getColour = () => {
-        console.log(data[repoData.language].color)
         return data[repoData.language].color;
     }
 
@@ -24,25 +23,21 @@ function Repo({ repoData }) {
         let lastUpdated;
         if (currentTime.getFullYear() != updateTime.getFullYear()) {
             lastUpdated = `on ${updateTime.toLocaleString('default', { month: 'short' })} ${updateTime.getDate()} ${updateTime.getFullYear()}`;
-            return lastUpdated;
         }
-        if (timeDiff > 2678000) {
+        else if (timeDiff > 2678000) {
             lastUpdated = `on ${updateTime.toLocaleString('default', { month: 'short' })} ${updateTime.getDate()}`;
-            return lastUpdated;
         }
-        if (Math.floor(timeDiff / 86400) > 0) {
+        else if (Math.floor(timeDiff / 86400) > 0) {
             lastUpdated = `${Math.floor(timeDiff / 86400)} days ago`;
-            return lastUpdated;
         }
-        if (Math.floor(timeDiff / 3600) > 0) {
+        else if (Math.floor(timeDiff / 3600) > 0) {
             lastUpdated = `${Math.floor(timeDiff / 3600)} hours ago`;
-            return lastUpdated;
         }
-        if (Math.floor(timeDiff / 60) > 0) {
+        else if (Math.floor(timeDiff / 60) > 0) {
             lastUpdated = `${Math.floor(timeDiff / 60)} minutes ago`;
-            return lastUpdated;
+        } else {
+            lastUpdated = `${timeDiff} seconds ago`;
         }
-        lastUpdated = `${timeDiff} seconds ago`;
         return lastUpdated;
     }
 
