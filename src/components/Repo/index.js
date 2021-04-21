@@ -1,12 +1,19 @@
 import React from 'react';
 import data from './languageColours.json';
+import './style.css'
 
 function Repo({ repoData }) {
 
-    const getColours = (language) => {
-        if (language) {
-            console.log(data[language].color)
-            return data[language].color;
+    const renderLanguage = () => {
+        return <h4><span className="languageColour" style={{
+            backgroundColor: getColour()
+          }}></span> {repoData.language}</h4>
+    }
+
+    const getColour = () => {
+        if (repoData.language) {
+            console.log(data[repoData.language].color)
+            return data[repoData.language].color;
         }
     }
 
@@ -44,7 +51,7 @@ function Repo({ repoData }) {
             <div className="repo">
                 <div className="repoTitle">
                     <h3><a href={repoData.url}>{repoData.name}</a></h3>
-                    <h4>{repoData.language}</h4>
+                    {renderLanguage()}
                     <h4>Updated {getDate()}</h4>
                 </div>
                 <ul className="repoData">
