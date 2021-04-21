@@ -1,5 +1,5 @@
 import React from 'react';
-import { SearchForm, Repo } from '../../components';
+import { SearchForm, Repo, Avatar } from '../../components';
 import { useSelector, useDispatch } from 'react-redux';
 import { getUserData } from '../../actions';
 
@@ -15,14 +15,22 @@ function User() {
     const search = username => dispatch(getUserData(username));
 
     const renderRepos = () => {
-        return result.data.map(r =>
-            r.name ? <Repo repoData={r} key={result.data.indexOf(r)}/> : console.log('empty repo')
+        console.log(result)
+        return result.data.userRepoData.map(r =>
+            r.name ? <Repo repoData={r} key={result.data.userRepoData.indexOf(r)}/> : console.log('empty repo')
         );
+    };
+
+    const renderAvatar = () => {
+        if (result.data.userAvatar) {
+            return <Avatar imageSrc={result.data.userAvatar} />
+        }
     }
 
     return (
         <>
         <SearchForm getRepos={search}/>
+        {renderAvatar()}
         { error ? <p role="alert">Oops there's been an error!</p> : renderRepos() }
         </>
     );
