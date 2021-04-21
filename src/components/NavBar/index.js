@@ -8,7 +8,7 @@ const NavBar = () => {
     const history = useHistory();
 
     return (
-        <nav class="nav-body">
+        <nav className="nav-body">
             <NavLink activeClassName="current" exact to="/">Home</NavLink>
             <NavLink activeClassName="current" to="/user">User</NavLink>
         </nav>

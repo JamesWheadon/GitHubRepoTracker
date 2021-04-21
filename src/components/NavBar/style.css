@@ -5,7 +5,7 @@
   }
   
   /* Style the links inside the navigation bar */
- a {
+ .nav-body a {
     float: left;
     display: block;
     color: #f2f2f2;
@@ -16,7 +16,7 @@
     border-bottom: 3px solid transparent;
   }
   
- a:hover {
+ .nav-body a:hover {
     border-bottom: 3px solid #f9826c;
   }
   

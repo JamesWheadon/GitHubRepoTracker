@@ -6,5 +6,9 @@
     margin-left: 50px
 }
 #github {
-    width: 795px;
+    width: 100%;
+}
+
+.Link-secondary{
+    color:grey
 }
